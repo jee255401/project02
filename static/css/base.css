@@ -1,5 +1,6 @@
 body {
-    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+    /*font-family: "Lucida Grande", Verdana, Arial, sans-serif;*/
+    font-family: 'Sunflower', sans-serif;
     font-size: 12px;
 }
 
@@ -11,7 +12,8 @@ div#header {
     height: 30px;
     width: 100%;
     display: table;
-    background: orange;
+    /*background: orange;*/
+    background: cadetblue;
 }
 
 div#menu {
@@ -119,5 +121,4 @@ td, th {
     border-bottom: 1px solid #eee;
     vertical-align: top;
     padding: 5px 15px;
-    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
 }
