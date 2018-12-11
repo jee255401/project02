@@ -16,17 +16,25 @@
 
 <div id="header">                   <!--헤더 영역-->
     <h2 class="maintitle">쉽고 빠른 장고 웹 프로그래밍</h2>
-    <h4 class="welcome">반갑습니다. <a href="#">문예지</a>님.  /
-                <a href="#">비밀번호 변경</a> /
-                <a href="#">로그아웃</a>
+    {% if user.is_active %}
+    <h4 class="welcome">환영합니다
+        <strong>{% firstof user.get_short_name.get_username %}</strong>
+        <a href="{% url 'password_change' %}"> / 비밀번호 변경</a>
+        <a href="{% url 'logout' %}"> / 로그아웃</a>
     </h4>
+    {% else %}
+    <h4 class="welcome">환영합니다
+        <a href="{% url 'login' %}"> / 로그인</a>
+        <a href="{% url 'register' %}"> / 회원가입</a>
+    </h4>
+    {% endif %}
 </div>
 
 <div id="menu">                     <!--메뉴 영역-->
     <li><a href="{% url 'home' %}">홈</a></li>
     <li><a href="{% url 'bookmark:index' %}">책갈피</a></li>
     <li><a href="{% url 'blog:index' %}">게시판</a></li>
-    <li><a href="#">사진첩</a></li>   <!-- 7장에서 변경 예정 -->
+    <li><a href="{% url 'photo:index' %}">사진첩</a></li>  <!--7장에서 변경 예정-->
 
     <li><a href="#">추가&bigtriangledown;</a>             <!--드롭다운 메뉴 구성-->
         <ul>
@@ -44,7 +52,7 @@
     </li>
 
     <li><a href="{% url 'blog:post_archive' %}">저장소</a></li>
-    <li><a href="{% url 'blog:search' %}">검색</a></li>     <!--ch09 수정 1/1-->
+    <li><a href="{% url 'blog:search' %}">검색</a></li>               <!--ch09 수정 1/1-->
     <li><a href="{% url 'admin:index' %}">관리자</a></li>
 </div>
 
@@ -52,5 +60,6 @@
 
 {% block footer %}{% endblock %}    <!--블록 태그로 풋터 영역 정의-->
 
+<!--{% block js %}{% endblock js%}-->
 </body>
 </html>

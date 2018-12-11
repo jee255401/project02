@@ -1,5 +1,5 @@
 # 뷰 작성에 필요한 클래스형 제넥릭 뷰 임포트
-from django.views.generic import ListView, DetailView, TemplateView   # ch07추가01
+from django.views.generic import ListView, DetailView, TemplateView # ch07추가01 TemplateView
 # 뷰 작성에 필요한 날짜 제네릭 뷰 임포트
 from django.views.generic.dates import ArchiveIndexView, \
     YearArchiveView, MonthArchiveView, DayArchiveView, TodayArchiveView
@@ -8,9 +8,7 @@ from blog.models import Post
 from tagging.models import Tag, TaggedItem                          # ch07추가02
 from tagging.views import TaggedObjectList                          # ch07추가03
 
-
 # 아래 두 클래스 추가                                               # ch07추가04
-# /blog/tag/ 요청에 따라 태그 클라우드 템플릿을 출력
 # TemplateView 제네릭 뷰는 테이블 처리 없이 단순 템플릿 렌더링 처리만 담당하는 뷰
 class TagTV(TemplateView) :
     template_name = 'tagging/tagging_cloud.html' # 태그 클라우드를 출력하는 템플릿
@@ -22,7 +20,6 @@ class TagTV(TemplateView) :
 class PostTOL(TaggedObjectList) :
     model = Post
     template_name = 'tagging/tagging_post_list.html'
-
 
 # ListView를 상속받아서 PostLV 작성
 class PostLV(ListView) :
@@ -96,7 +93,12 @@ class SearchFormView(FormView):
     def form_valid(self, form) :
 	    # POST 요청의 id가 'search_word'인 값을 추출하여 변수에 저장
         schWord = '%s' % self.request.POST['search_word']
-	    # filter() 메소드의 매칭 조건을 Q 객체로 다양하게 지정 가능함
+        # 개별 검색 1/
+        schTitle = '%s' % self.request.POST['search_title']
+        schDescription = '%s' % self.request.POST['search_description']
+        schContent = '%s' % self.request.POST['search_content']
+        schTag = '%s' % self.request.POST['search_tag']
+        # filter() 메소드의 매칭 조건을 Q 객체로 다양하게 지정 가능함
 	    # 각 조건에서 icontains 연산자는 대소문자 구별 없이
 	    # 검색어가 포함되었는지 검사
 	    # distinct() 메소드는 중복된 객체를 제외함
@@ -109,18 +111,47 @@ class SearchFormView(FormView):
 	        Q(content__icontains=schWord) |
 	        Q(tag__icontains=schWord)
         ).distinct()
+        # 개별 검색 2/
+        my_post_list = []
+
+        if schTitle :
+            my_post_list += Post.objects.filter(
+                Q(title__icontains=schTitle)
+            ).distinct()
+
+        if schDescription :
+            my_post_list += Post.objects.filter(
+                Q(description__icontains=schDescription)
+            ).distinct()
+
+        if schContent :
+            my_post_list += Post.objects.filter(
+                Q(content__icontains=schContent)
+            ).distinct()
+
+        if schTag :
+            my_post_list += Post.objects.filter(
+                Q(tag__icontains=schTag)
+            ).distinct()
 
         # 템플릿에 전달할 맥락 변수 context를 사전 형식으로 정의
         context = {}
         context['form'] = form  # 여기서 form은 PostSearchForm을 지칭함
         context['search_term'] = schWord
         context['object_list'] = post_list
-
+        # 개별 검색 3/
+        context['search_title'] = schTitle
+        context['search_description'] = schDescription
+        context['search_content'] = schContent
+        context['search_tag'] = schTag
+        context['my_object_list'] = my_post_list
 		# 단축 함수 render()는 템플릿과 맥락 변수를 처리하여,
 	    # 최종적으로 HttpResponse 객체를 반환
 	    # 일반적으로 form_valid() 함수는 리다이렉트 처리를 위하여
 	    # HttpResponseRedirect 객체를 반환하는데,
 	    # 여기서는 render() 함수가 HttpResponse 객체를 반환하므로
 	    # 리다이렉트 처리가 되지 않게됨.
+
+        # form = PostSearchForm()
         return render(self.request, self.template_name, context)
 # ch09 추가 1/1 종료

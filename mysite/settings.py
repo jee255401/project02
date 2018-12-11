@@ -46,10 +46,10 @@ INSTALLED_APPS = [
     'tagging.apps.TaggingConfig',       # (ch07) tagging 앱을 추가 등록
     'disqus',                           # (ch08) 1/4
     'django.contrib.sites',             # (ch08) 2/4
+    'photo.apps.PhotoConfig',  # (ch10) 1/1
 ]
-DISQUS_WEBSITE_SHORTNAME = 'jee255401'   # (ch08) 3/4 [Website Name]
-SITE_ID = 1                             # (ch08) 4/4 django.contrib.sites를 등록할 때 사용하는 값, 임의로 지정하지만, 중복되지 않도록!
-
+DISQUS_WEBSITE_SHORTNAME = 'logistex'   # (ch08) 3/4
+SITE_ID = 1                             # (ch08) 4/4
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -135,4 +135,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]   # 추가 (교과서 40 쪽)
 
 MEDIA_URL = '/media/'                             # 추가 (교과서 40 쪽)
-MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]    # 추가 (교과서 40 쪽)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    # 추가 (교과서 40 쪽)
+
+# LOGIN_URL = '/accounts/login/'
+# LOGOUT_URL = 'accounts/logout/'
+LOGIN_REDIRECT_URL = '/'

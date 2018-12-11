@@ -13,21 +13,24 @@
                 <th>제목</th>
                 <th>슬러그</th>
                 <th>요약</th>
+                <th>태그</th>
             </tr>
             {% for post in posts %}
             <tr>
                 <td>{{ post.id }}</td>
                 <td>{{ post.modify_date|date:"Y년 m월 d일" }}</td>
-                <td><a href='{{ post.get_absolute_url }}'>{{ post.title }}</a></td>
+                <td>
+                    <a href='{{ post.get_absolute_url }}'>
+                        <strong>{{ post.title }}</strong>
+                    </a>
+                </td>
                 <td>{{ post.slug }}</td>
-                <!--<td><p>{{ post.description }}</p></td>-->
                 <td>{{ post.description }}</td>
+                <td>{{ post.tag }}</td>
             </tr>
             {% endfor %}
         </table>
-
         <br/>
-
         <!--이전/현재/다음 페이지 이동 -->
         <div class="centered"> <!--div 요소는 블록 요소-->
             <span>  <!--span 요소는 인라인 요소-->
@@ -37,9 +40,9 @@
                     첫 페이지
                 {% endif %}
 
-                &nbsp;&nbsp;(
+                &nbsp;&nbsp;&nbsp;(&nbsp;
                 {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
-                )&nbsp;&nbsp;
+                &nbsp;)&nbsp;&nbsp;&nbsp;
 
                 {% if page_obj.has_next %}
                     <a href="?page={{ page_obj.next_page_number }}">다음 페이지</a>
@@ -50,4 +53,5 @@
         </div>
     </div>
 {% endblock %}
+
 

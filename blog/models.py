@@ -5,9 +5,7 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
 # url 패턴을 만들어주는 장고 내장 함수 reverse()를 위한 임포트
 from django.core.urlresolvers import reverse
-from tagging.fields import TagField                 # ch07 추가
-
-# Create your models here.
+from tagging.fields import TagField         # ch07 추가
 
 @python_2_unicode_compatible
 class Post(models.Model):
@@ -25,11 +23,11 @@ class Post(models.Model):
                                    help_text='간략한 설명 문구.')
     content = models.TextField('내용')  # TextField이므로 여러 줄 입력 가능함
     create_date = models.DateTimeField('최초 생성 일시',
-                                       auto_now_add=True)  # 최초 생성 일시를 자동 저장하도록
+                                       auto_now_add=True) # 최초 생성 일시를 자동 저장하도록
     modify_date = models.DateTimeField('최종 수정 일시',
                                        auto_now=True)  # 최종 수정 일시를 자동 저장하도록
-    tag = TagField('태그',  # ch07 추가
-                   help_text='게시글에 대한 태그')  # ch07 추가
+    tag = TagField('태그',
+                   help_text='게시글에 대한 태그')                         # ch07 추가
 
 
     class Meta:  # 필드 속성 외에 필요한 파라미터를 Meta 내부 클래스로 정의
@@ -47,6 +45,7 @@ class Post(models.Model):
         # # Example: /post/django-example/
         # url(r'^post/(?P<slug>[-\w]+)/$', PostDV.as_view(), name='post_detail'),
         return reverse('blog:post_detail', args=(self.slug,))
+
     def get_previous_post(self):  # 3.2.5 항에서 템플릿 작성할 때 사용
         return self.get_previous_by_modify_date()
 
