@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595464c4-00e5-432c-a59b-4eb41c6cb5b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Django_Lib.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/work.iml" afterPath="$PROJECT_DIR$/.idea/work.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/blog/forms.py" afterPath="$PROJECT_DIR$/blog/forms.py" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_search.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_search.html" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Hydrangeas.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Hydrangeas.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Koala.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Koala.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Lighthouse.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Lighthouse.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Penguins.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Penguins.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Tulips.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/media/photo/2018/11/Tulips.thumb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings.py" afterPath="$PROJECT_DIR$/mysite/settings.py" />
-      <change beforePath="$PROJECT_DIR$/mysite/urls.py" afterPath="$PROJECT_DIR$/mysite/urls.py" />
-      <change beforePath="$PROJECT_DIR$/mysite/views.py" afterPath="$PROJECT_DIR$/mysite/views.py" />
-      <change beforePath="$PROJECT_DIR$/photo/fields.py" afterPath="$PROJECT_DIR$/photo/fields.py" />
-      <change beforePath="$PROJECT_DIR$/photo/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/photo/migrations/0001_initial.py" />
-      <change beforePath="$PROJECT_DIR$/photo/models.py" afterPath="$PROJECT_DIR$/photo/models.py" />
-      <change beforePath="$PROJECT_DIR$/photo/static/photo/photo.css" afterPath="$PROJECT_DIR$/photo/static/photo/photo.css" />
-      <change beforePath="$PROJECT_DIR$/photo/templates/photo/album_detail.html" afterPath="$PROJECT_DIR$/photo/templates/photo/album_detail.html" />
-      <change beforePath="$PROJECT_DIR$/photo/templates/photo/album_list.html" afterPath="$PROJECT_DIR$/photo/templates/photo/album_list.html" />
-      <change beforePath="$PROJECT_DIR$/photo/templates/photo/photo_detail.html" afterPath="$PROJECT_DIR$/photo/templates/photo/photo_detail.html" />
-      <change beforePath="$PROJECT_DIR$/photo/urls.py" afterPath="$PROJECT_DIR$/photo/urls.py" />
-      <change beforePath="$PROJECT_DIR$/photo/views.py" afterPath="$PROJECT_DIR$/photo/views.py" />
-      <change beforePath="$PROJECT_DIR$/static/css/forms.css" afterPath="$PROJECT_DIR$/static/css/forms.css" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/templates/registration/logged_out.html" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" afterPath="$PROJECT_DIR$/templates/registration/login.html" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/password_change_done.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/templates/registration/password_change_form.html" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html" afterPath="$PROJECT_DIR$/templates/registration/register.html" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register_done.html" afterPath="$PROJECT_DIR$/templates/registration/register_done.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -258,10 +217,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="640" />
-    <option name="width" value="640" />
-    <option name="height" value="984" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -521,16 +480,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="952" y="0" width="976" height="1038" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2281106" sideWeight="0.50647247" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2015855" sideWeight="0.4935275" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15520945" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20389462" sideWeight="0.4935275" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09222222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -666,6 +624,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1625">
           <caret line="65" column="30" lean-forward="false" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -673,6 +632,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,6 +670,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-919">
           <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -735,6 +696,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -758,6 +720,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
