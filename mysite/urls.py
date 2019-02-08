@@ -1,18 +1,28 @@
 from django.conf.urls import include, url
 from django.contrib import admin
+# static() 함수는 정적 파일 처리하는 뷰를 호출할 수 있도록 URL 패턴을 반환
 from django.conf.urls.static import static                              # ch10 1/4
 # settings 변수는 settings.py 모듈에서 정의한 항목들을 담고 있는 객체에 대한 참조
 from django.conf import settings                                        # ch10 2/4
-from mysite.views import HomeView  # 추가!!!
-from mysite.views import UserCreateView, UserCreateDoneTV
+
+from mysite.views import HomeView
+# 회원 가입 처리 뷰 임포트
+from mysite.views import UserCreateView, UserCreateDoneTV         # ch11 1/2
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    # 아래 인증 관련 3행 추가                                        # ch11 2/2
+    # 장고 인증 URLconf를 인클루드하여 활용하는데,
+    #   여기에 정의된 /login, /logout 등이
+    #   실제로는 /accounts/login, /accounts/logout 등으로 처리됨
     url(r'^accounts/', include('django.contrib.auth.urls')),
+    # 계정 가입 처리하는 URL
     url(r'^accounts/register/$', UserCreateView.as_view(), name='register'),
+    # 계정 가입 완료될 때 보여줄 URL
     url(r'^accounts/register/done/$', UserCreateDoneTV.as_view(), name='register_done'),
 
-    url(r'^$', HomeView.as_view(), name='home'),  # 추가!!!
+    url(r'^$', HomeView.as_view(), name='home'),
+
     url(r'^bookmark/', include('bookmark.urls', namespace='bookmark')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^photo/', include('photo.urls', namespace='photo')),          # ch10 3/4

@@ -5,6 +5,7 @@ from PIL import Image
 # 업로드된 파일을 서버에 저장하기 위해서 운영체제 라이브러리를 임포트
 import os
 
+
 # 지정한 이미지 파일에 대한 썸네일 이미지 파일명을 생성
 def _add_thumb(s):              # 매개변수 s에는 파일 path가 전달됨
 	parts = s.split(".")        # 문자열 나누기 https://wikidocs.net/13
@@ -12,6 +13,7 @@ def _add_thumb(s):              # 매개변수 s에는 파일 path가 전달됨
 	if parts[-1].lower() not in ['jpeg', 'jpg']:    # 확장자에 대한 검사
 		parts[-1] = 'jpg'       # 확장자를 수정
 	return ".".join(parts)      # "myPic.thumb.jpg"
+
 
 class ThumbnailImageFieldFile(ImageFieldFile):
 	# 필드 클래스에 상응하는 파일 처리 클래스
@@ -41,6 +43,7 @@ class ThumbnailImageFieldFile(ImageFieldFile):
 		if os.path.exists(self.thumb_path):
 			os.remove(self.thumb_path)
 		super().delete(save)
+
 
 class ThumbnailImageField(ImageField): # 이 클래스가 모델 정의에 사용되는 필드
 	# 새로운 필드 클래스 정의 시, 상응하는 파일 처리 클래스를 attr_class에 지정

@@ -21,3 +21,4 @@ urlpatterns = [
 	# url(r'^album/(?P<pk>\d+)/$', DetailView.as_view(model=Album), name='album_detail'),
 	# url(r'^photo/(?P<pk>\d+)/$', DetailView.as_view(model=Photo), name='photo_detail'),
 ]
+

@@ -12,14 +12,14 @@
     <!--csrf-token 태그를 써서 CSRF 공격을 방지-->
     <form id="my_form" action="." method="post">
         {% csrf_token %}
-        <div class="centered" >
-            <table align="center">
+        <div class="centered">
+            <table>
                 <!--form은 뷰가 넘겨준 PostSearchForm을 의미함-->
                 <!--as_table, as_ul, as_p-->
-                {{ form.as_table }}
+                 {{ form.as_table }}
             </table>
             <!--<button>초기화</button>-->
-            <br/><input type="submit" value="확인"/>
+            <input type="submit" value="확인" />
             <!--<input type="button" value="Reset" onClick="this.form.reset()" />-->
         </div>
     </form>

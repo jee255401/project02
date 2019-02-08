@@ -13,10 +13,11 @@
                 <a href="{% url 'photo:album_detail' album.id %}">{{ album.name }}</a>
             </h2>
             &emsp;<b><i>{{ album.description }}</i></b>
+            &nbsp;&nbsp; ({{ album.photo_set.all.count }} 컷)
         </div>
         <hr/>
         <div class="album-list">
-            {% for photo in album.photo_set.all|slice:":5" %}
+            {% for photo in album.photo_set.all|slice:":10" %}
                 <div class="album-list-photo">
                     <a href="{{ photo.get_absolute_url }}">
                         <img class="thumbnail" src="{{ photo.image.thumb_url }}" />
@@ -27,3 +28,4 @@
     {% endfor %}
 </div>
 {% endblock %}
+
