@@ -13,7 +13,7 @@
     <form id="my_form" action="." method="post">
         {% csrf_token %}
         <div class="centered">
-            <table>
+            <table align="center">
                 <!--form은 뷰가 넘겨준 PostSearchForm을 의미함-->
                 <!--as_table, as_ul, as_p-->
                  {{ form.as_table }}

@@ -1,12 +1,46 @@
 div#content_home {
     position: absolute;
-    top: 80px;
-    left: 110px;
-    right: 110px;
+    margin-top: 160px;
+    /*top: 80px;*/
+    left: 0px;
+    right: 0px;
 }
 
 div#homeimg {
-    background: #ddd;
+    /*background: #fcf0f0;*/
     padding: 5px 0 1px 0;
     text-align: center;
+}
+
+div#content {
+    top : 780px;
+    text-align: center;
+}
+div#homeimg2 {
+    position: relative;
+    top: 750px;
+    padding: 5px 0 1px 0;
+    text-align: center;
+}
+div#footer {
+    top: 2300px;
+    left: 0px;
+    right: 0px;
+    height: 190px;
+    background-color: #ececec;
+    padding-left: 35%;
+    text-align: left;
+    border-top: none;
+}
+#compintrop {
+    font-size: 20px;
+}
+
+div > h2 {
+    font-size: 30px;
+}
+
+#applist {
+    margin: 0 auto;
+    text-align: left;
 }

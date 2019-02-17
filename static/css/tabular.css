@@ -26,3 +26,8 @@
 .leftpadding30percent { padding-left: 30%; }
 #disqus_thread { font-size: 6px; } /* ch08 1/1 */
 
+/*190217 추가*/
+div#content {
+    position: absolute;
+    top: 170px;
+}

@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block title %}회원 가입 완료{% endblock %}
 
+{#190217 추가 ~ #}
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/forms.css" %}{% endblock %}
+{# ~ 190217 추가#}
+
 {% block content %}
 <div id="content">
     <h1>회원으로 가입되셨습니다.</h1>
