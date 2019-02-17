@@ -46,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/mysite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="394">
-              <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+              <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <marker date="1544494974000" expanded="true" signature="1061:1278" ph="..." />
@@ -793,7 +793,7 @@
     <entry file="file://$PROJECT_DIR$/mysite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
-          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <marker date="1544494974000" expanded="true" signature="1061:1278" ph="..." />
